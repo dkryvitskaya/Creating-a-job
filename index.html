@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Create a job</title>
+</head>
+<body>
+    <section class="container">
+        <!-- Client details -->
+        <div class="first_part">
+            <section class="form-group">
+                <h1>Client details</h1>
+                <div class="two">
+                    <input type="text" id="firstName" placeholder="First name" />
+                    <input type="text" id="lastName" placeholder="Last name" />
+                </div>
+                <input type="text" id="phone" placeholder="Phone" />
+                <input type="email" id="email" placeholder="Email (optional)" />
+            </section>
+
+            <!-- Job details -->
+            <section class="form-group">
+                <h1>Job type</h1>
+
+                    <select id="jobType">
+                        <option value="">Job type</option>
+                        <option value="type">type</option>
+                        <!-- other options -->
+                    </select>
+                    <select id="jobSource">
+                        <option value="">Job source</option>
+                        <option value="GL Pinellas">GL Pinellas</option>
+                        <!-- other options -->
+                    </select>
+                <textarea id="jobDescription" placeholder="Job description (optional)"></textarea>
+            </section>
+        </div>
+
+        <!-- Service location -->
+        <div class="second_part">
+            <section class="form-group">
+                <h1>Service location</h1>
+                <input type="text" id="address" placeholder="Address" />
+                <input type="text" id="city" placeholder="City" />
+                <input type="text" id="state" placeholder="State" />
+                <div class="two">
+                    <input type="text" id="code" placeholder="Zip code" />
+                    <select id="area">
+                        <option value="">Area</option>
+                        <option value="Tampa">Tampa</option>
+                        <!-- other options -->
+                    </select>
+                </div>
+            </section>
+
+            <!-- Scheduled -->
+            <section class="form-group">
+                <h1>Scheduled</h1>
+                <input type="date" id="date" placeholder="Start date"/>
+                <div class="two">
+                    <input type="time" id="startTime" placeholder="Start time"/>
+                    <input type="time" id="endTime" placeholder="End time"/>
+                </div>
+                <select id="technician">
+                    <option value="">Select technician</option>
+                    <option value="technician">technician</option>
+                    <!-- other options -->
+                </select>
+            </section>
+        </div>
+
+        <div class="buttons">
+            <button onclick="createJob()">Create job</button>
+            <button class="save" onclick="saveInfo()">Save info</button>
+        </div>
+    </section>
+</body>
+</html>
